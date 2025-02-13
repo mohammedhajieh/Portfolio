@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Image/Logo.png" class="logo"></img>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Flutter Mobile Development && Oracle Technical Consultant</p>
+                <h1>Hi, I'm <span>Mohammed Al-Hajjeeh</span><br>From Jordan</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ----------ABOUT---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Image/User.JPG"></img>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am Mohammad Al-Hajjeeh, a Software Engineering graduate from Jordan University of Science and
+                        Technology with a Very Good GPA.
+                    </p>
+
+                    <p>
+                        I gained hands-on experience as a Flutter Mobile Developer through internships at The Hope
+                        Company and EFE, where I developed iOS and Android applications,
+                        focusing on Responsive UI, state management (GetX), API integration (HTTP), GitHub, Postman, and
+                        SQL.
+                    </p>
+
+                    <p>
+                        Additionally, I worked for one year as an Oracle Technical Fusion Developer at Macquiers,
+                        specializing in custom and standard reports for Supply Chain, Finance, and HR systems.
+                    </p>
+
+                    <p>
+                        My expertise includes Sandbox for report display, Page Composer for screen modifications,
+                        Visual Builder for custom UI development, and Security Roles management.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('certificate')">Certificate</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces:
+                                <br>
+                                1-Adobe XD.
+                                <br>
+                                2-Figma.
+                            </li>
+                            <li><span>App Development</span><br>Building Android/iOS apps:
+                                <br>
+                                1-Flutter ui/ux.
+                                <br>
+                                2-Restful Api Flutter (http).
+                                <br>
+                                3-Firebase.
+                                <br>
+                                4-State Management (getx).
+                                <br>
+                                5-GitHup.
+                                <br>
+                                6-Postman.
+                            </li>
+                            <li><span>Oracle DataBase</span><br>Oracle Fusion SaaS:
+                                <br>
+                                1-Oracle BI Publisher (XML Publisher).
+                                <br>
+                                2-Vsiual Builder.
+                                <br>
+                                3-Sand Box.
+                                <br>
+                                4-Page Composer.
+                                <br>
+                                5-SQL.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2/2025-Present</span><br>Flutter developer at Masna3 Tech Company <a
+                                    target="_blank" href=""><i class="fa-solid fa-link"></i></i></a>.</i></li>
+                            <li><span>2/2024-Present</span><br>Oracle Technical Consultant at Macquires Company <a
+                                    target="_blank" href=""><i class="fa-solid fa-link"></i></i></a>.</i></li>
+                            <li><span>9/2023-10/2023</span><br>Flutter developer at Education For Employment Company <a
+                                    target="_blank"
+                                    href="https://drive.google.com/file/d/1uYJyrq3HWNp_qv1puDB9pVoGjEFGcOaW/view?usp=drive_link"><i
+                                        class="fa-solid fa-link"></i></i></a>.</i></li>
+                            <li><span>1/2023-4/2023</span><br>Flutter developer at The Hope International Company <a
+                                    target="_blank"
+                                    href="https://drive.google.com/file/d/1qausA75j72VBomuUqJHWYPuKa12kQQjA/view?usp=drive_link"><i
+                                        class="fa-solid fa-link"></i></i></a>.</i></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certificate">
+                        <ul>
+                            <li><span>1/2025-1/2025</span><br>Flutter workshop at Masna3 and Qafza Tech Company
+                                <a target="_blank"
+                                    href="https://drive.google.com/file/d/1OyEHnZcJn2v7cpBV1hwKvkP_qOpLcTIV/view?usp=sharing"><i
+                                        class="fa-solid fa-link"></i></i></a>.</i>
+                            </li>
+                            <li><span>8/2023-9/2023</span><br>Work Readiness and English Skills at Education For
+                                Employment Company <a target="_blank"
+                                    href="https://drive.google.com/file/d/1U8if9pP7EX2zBU2ADId_pGQhl8CUw4ZV/view?usp=drive_link"><i
+                                        class="fa-solid fa-link"></i></i></a>.</i></li>
+                            <li><span>7/2021-9/2021</span><br>Entrepreneurship Course at Cisco Networking Academy <a
+                                    target="_blank"
+                                    href="https://drive.google.com/file/d/1ML2olJ1i6-zs-42jXjEg_x6uzxTP5A6o/view?usp=drive_link"><i
+                                        class="fa-solid fa-link"></i></i></a>.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019-2023</span><br>Bachelor’s degree in Software Engineering from Jordan
+                                University of Science and technology.</li>
+                            <li><span>2017-2019</span><br>High school degree major Scientific.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------SERVICES---------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>App Development</h2>
+                    <p>building app Android/iOS using flutter language.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="oracle-fusion-box">
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Oracle Fusion SaaS</h2>
+                    <p> Completed training in SQL, utilizing it for querying databases and report generation.
+                        <br>
+                        Gained hands-on experience with Oracle Fusion SaaS, specializing in financial, supply chain, and
+                        HR reporting.
+                        <br>
+                        Developed custom screens and dashboards using Oracle Fusion Visual Builder to enhance user
+                        experience and functionality.
+                        <br>
+                        Performed Oracle Fusion Personalization using Sandbox, working with Structure and Page Composer
+                        for UI customization and process optimization.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="ui-ux-box">
+                    <i class="fa-solid fa-palette"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Designing Web/App interfaces using Adobe XD / Figma.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------PORTFOLIO--------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Image/Resume.png" alt="">
+                    <div class="layer">
+                        <h2>Resume App</h2>
+                        <p>"The Resume App is an application to view my resume.</p>
+                        <a target="_blank" href="https://github.com/mohammedhajieh/ResumeApp.git"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Image/J-Wallet1.png" alt="">
+                    <div class="layer">
+                        <h2>J-Wallet App</h2>
+                        <p>J-Wallet app is cryptocurrency wallet for send and receive Solana and Jcoins,
+                            requires no third party while providing a robust and secure programming environment for
+                            smart contract application.</p>
+                        <a target="_blank" href="https://github.com/mohammedhajieh/J-Wallet"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Image/The World.png" alt="">
+                    <div class="layer">
+                        <h2>The world App</h2>
+                        <p>The world app is an application to show news, weathers, and clocks for all parts of the
+                            world.</p>
+                        <a target="_blank" href="https://github.com/mohammedhajieh/TheWorldApp.git"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="work-list1">
+                <div class="work">
+                    <img src="Image/Wasilni.jpg" alt="">
+                    <div class="layer">
+                        <h2>Wasilni App</h2>
+                        <p>"Wasilni" is an application serving People at the Jordan.
+                            It helps Peoples know if transportation is available or not and know transportation prices.
+                        </p>
+                        <a target="_blank"
+                            href="https://docs.google.com/document/d/17zuwm325CUyDzJaP6BJ0QdiPbbhxjG61/edit?usp=drive_link&ouid=114026777925214593042&rtpof=true&sd=true"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Image/Medical 1.png" alt="">
+                    <div class="layer">
+                        <h2>Medical Warehouse App</h2>
+                        <p>Medical Warehouse straightforward application that focuses
+                            on making the supply process easier and more organized for hospitals and pharmacies.</p>
+                        <a target="_blank"
+                            href="https://xd.adobe.com/view/caedbfa2-4202-44c8-a006-2d98ca38493d-9fbe/"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a< /a>
+        </div>
+    </div>
+
+    <!-- ----------CONTACT---------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <!-- ----------VERSION 1.0 ---------- -->
+                    <!--<p><i class="fas fa-paper-plane"></i> mohammedhajieh13@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+962790093239</p>-->
+                    <!-- ----------VERSION 1.1 ---------- -->
+                    <div class="contact-info">
+                        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail Icon" width="30">
+                        <p><a href="mailto:mohammedhajieh13@gmail.com">mohammedhajieh13@gmail.com</a></p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <p><a href="tel:+962790093239">+962790093239</a></p>
+                    </div>
+                    <div class="social-icons">
+                        <a target="_blank" href="https://www.facebook.com/mohmmad.hajii/"><i
+                                class="fab fa-facebook"></i></a>
+                        <a target="_blank" href="https://github.com/mohammedhajieh/"><i
+                                class="fa-brands fa-github"></i></i></a>
+                        <a target="_blank" href="https://www.instagram.com/mohammedhajieh90/"><i
+                                class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/mohammed-hajieh/"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a target="_blank" href="https://wa.me/962790093239">
+                            <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <a target="_blank"
+                        href="https://drive.google.com/file/d/18QgWFxhSl5FlNruebiBV6Yo6xgPb2Pt2/view?usp=sharing"
+                        download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <script>
+                var tabLinks = document.getElementsByClassName('tab-links');
+                var tabContents = document.getElementsByClassName('tab-contents');
+
+                function openTab(tabName) {
+                    for (tabLink of tabLinks) {
+                        tabLink.classList.remove('active-link');
+                    }
+                    for (tabContent of tabContents) {
+                        tabContent.classList.remove('active-tab');
+                    }
+                    event.currentTarget.classList.add('active-link');
+                    document.getElementById(tabName).classList.add('active-tab');
+                }
+            </script>
+            <script>
+                var sidemenu = document.getElementById("sidemenu");
+
+                function openmenu() {
+                    sidemenu.style.right = "0";
+                }
+
+                function closemenu() {
+                    sidemenu.style.right = "-200px";
+                }
+            </script>
+</body>
+
+</html>
