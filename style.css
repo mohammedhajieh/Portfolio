@@ -498,6 +498,10 @@ nav .fas {
     #header {
         /* background-image: url(Image/background.jpg); */
         background-image: url(Image/background1.jpeg);
+        width: 100%;
+        height: 98vh;
+        background-size: cover;
+        background-position: center;
     }
 
     .header-text {
