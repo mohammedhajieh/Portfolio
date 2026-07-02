@@ -644,4 +644,87 @@ nav .fas {
 
 }
 
-/* ----------CSS FOR SMALL SCREEN---------- */
+/* ---------- SERVICES + PORTFOLIO MOBILE FIX ---------- */
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .services-list,
+    .work-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .services-list>div {
+        width: 100%;
+    }
+
+    /* إصلاح أبعاد كارت الـ portfolio والـ layer */
+    .work {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .work img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* إخفاء الطبقة وتحضيرها للموبايل لتغطي كامل الصورة */
+    .work .layer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+
+        /* قراءة اللون المخصص لكل كارت من الـ Inline Style */
+        background: var(--bg-color, linear-gradient(rgba(0, 0, 0, 0.6), #ff004f));
+        color: var(--text-color, #fff);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        box-sizing: border-box;
+
+        /* إخفاء مبدئي وانتقال ناعم */
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform 0.5s, opacity 0.5s;
+    }
+
+    /* إصلاح ألوان العناوين والفقرات الداخلية بناءً على متغيرات الكارت */
+    .work .layer h2,
+    .work .layer p {
+        color: var(--text-color, #fff);
+    }
+
+    /* تنسيق أزرار الروابط لتتوافق مع التصميم المخصص */
+    .work .layer a {
+        color: var(--text-color, #111);
+        background: #fff;
+        margin-top: 10px;
+    }
+
+    /* عند الضغط (إضافة كلاس active عبر الـ JS) يتم إظهار الطبقة بلونها المخصص */
+    .work.active .layer {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* منع التمرير الأفقي */
+    #services,
+    #portfolio {
+        overflow-x: hidden;
+    }
+}
