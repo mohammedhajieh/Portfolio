@@ -41,3 +41,44 @@ copyButton?.addEventListener('click', async () => {
     copyStatus.textContent = 'Select the command to copy it manually.';
   }
 });
+
+// Start every visit at the introduction; section navigation stays on this page.
+function startAtTop() {
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+}
+startAtTop();
+window.addEventListener('pageshow', startAtTop);
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+document.querySelectorAll('nav a[href^="#"], .hero-actions a[href^="#"], footer a[href="#top"], .logo[href="#top"]').forEach(link => {
+  link.addEventListener('click', event => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ behavior: reduceMotion.matches ? 'instant' : 'smooth', block: 'start' });
+  });
+});
+
+const progress = document.querySelector('.reading-progress');
+let scrollFrame = false;
+function updateProgress() {
+  const range = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.transform = `scaleX(${range > 0 ? Math.min(1, window.scrollY / range) : 0})`;
+  scrollFrame = false;
+}
+window.addEventListener('scroll', () => {
+  if (!scrollFrame) { scrollFrame = true; requestAnimationFrame(updateProgress); }
+}, { passive: true });
+window.addEventListener('resize', updateProgress);
+updateProgress();
+if ('IntersectionObserver' in window) {
+  const sectionObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      document.querySelectorAll('nav a').forEach(link => {
+        if (link.getAttribute('href') === '#' + entry.target.id) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      });
+    }
+  }, { rootMargin: '-10% 0px -55% 0px', threshold: 0 });
+  document.querySelectorAll('main section[id]').forEach(section => sectionObserver.observe(section));
+}
